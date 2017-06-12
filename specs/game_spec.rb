@@ -11,9 +11,9 @@ class TestGame < Minitest::Test
   end
 
   def test_play
-    assert_equal("paper wins!", @game1.play)
-    assert_equal("rock wins!", @game2.play)
-    assert_equal("it's a draw!", @game3.play)
-    assert_equal("that's nonsense! play again", @game4.play)
+    assert_equal("paper!", @game1.play)
+    assert_equal("rock!", @game2.play)
+    assert_equal("no-one, it's a draw!", @game3.play)
+    assert_equal("no-one, invalid game", @game4.play)
   end
 end

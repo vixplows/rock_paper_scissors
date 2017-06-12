@@ -4,7 +4,7 @@ class Game
       @choice1 = choice1
       @choice2 = choice2
     end
-    
+
     def play()
       winners_hash = {
         "rock" => "scissors",
@@ -13,17 +13,17 @@ class Game
       }
       
       if !winners_hash.keys.include?(@choice1) || !winners_hash.keys.include?(@choice2)
-        return "that's nonsense! play again"
+        return "no-one, invalid game"
       end
 
       if @choice1 == @choice2
-        return "it's a draw!"
+        return "no-one, it's a draw!"
       end
 
       if winners_hash[@choice1] == @choice2
-        return "#{@choice1} wins!"
+        return "#{@choice1}!"
       else
-        return "#{@choice2} wins!"
+        return "#{@choice2}!"
       end
 
     end

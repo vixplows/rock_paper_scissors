@@ -6,7 +6,8 @@ require_relative( './models/game' )
 
 get '/play/:choice1/:choice2' do
   game = Game.new(params[:choice1], params[:choice2])
-  return game.play()
+  @winner = game.play()
+  erb (:result)
 end
 
 # get '/play/rock/scissor' do
