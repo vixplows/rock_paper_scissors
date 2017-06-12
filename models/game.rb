@@ -4,7 +4,7 @@ class Game
       @choice1 = choice1
       @choice2 = choice2
     end
-
+    
     def play()
       winners_hash = {
         "rock" => "scissors",
