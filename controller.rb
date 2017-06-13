@@ -20,3 +20,10 @@ get '/play/:choice1/:choice2' do
   @winner = game.play()
   erb(:result)
 end
+
+get '/play/:choice1' do
+  computer = ["paper", "rock", "scissors"].sample
+  game = Game.new(params[:choice1], computer)
+  @winner = game.play()
+  erb(:result)
+end

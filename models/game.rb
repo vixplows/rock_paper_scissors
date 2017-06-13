@@ -13,17 +13,17 @@ class Game
       }
       
       if !winners_hash.keys.include?(@choice1) || !winners_hash.keys.include?(@choice2)
-        return "no-one, invalid game"
+        return "no-one wins, invalid entry :( "
       end
 
       if @choice1 == @choice2
-        return "no-one, it's a draw!"
+        return "no-one wins, it's a draw!"
       end
 
       if winners_hash[@choice1] == @choice2
-        return "#{@choice1}!"
+        return "Player 1 wins with #{@choice1}!"
       else
-        return "#{@choice2}!"
+        return "Player 2 wins with #{@choice2}!"
       end
 
     end
